@@ -50,13 +50,33 @@
 .project > a {
   text-decoration: none;
   color: black;
+  margin-top: -5%;
 }
 .project > img {
-  margin-top: 5%;
+  margin-top: 1.25%;
   image-rendering: pixelated;
   position: relative;
   width: 75%;
   height: 75%;
+  object-fit: contain;
+}
+.project > a > img {
+  margin-top: 1.25%;
+  image-rendering: pixelated;
+  position: relative;
+  height: 50%;
+  width: 75%;
+  object-fit: contain;
+  margin-bottom: -1.25%;
+}
+.longName {
+  position: relative;
+  min-width: 100%;
+  min-height: 100%;
+  font-size: small;
+}
+.longName > img {
+  top: 1.25%;
 }
 @media screen and (max-width: 640px) {
   .body {
