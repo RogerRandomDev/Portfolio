@@ -1,0 +1,21 @@
+.pushbutton {
+  position: relative;
+  background-color: rgb(155, 15, 15);
+  color: transparent;
+  z-index: 1;
+  width: fit-content;
+  user-select: none;
+}
+.pushbutton::before {
+  content: '';
+  position: absolute;
+  min-width: 100%;
+  min-height: 100%;
+  height: fit-content;
+  background-color: red;
+  top: -50%;
+  transition-duration: 0.125s;
+}
+.pushbutton:active:before {
+  top: 0%;
+}
