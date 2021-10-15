@@ -17,7 +17,7 @@
     'main main main main main'
     'main main main main main'
     'main main main main main'
-    '. . . . .';
+    '. botbutton botbutton botbutton .';
   gap: 1.25%;
   margin-left: auto;
   margin-right: auto;
@@ -84,6 +84,9 @@
   height: 50%;
   margin-bottom: 5%;
 }
+.botbutton {
+  grid-area: botbutton;
+}
 @media screen and (max-width: 640px) {
   .body {
     grid-template-areas:
@@ -99,7 +102,7 @@
       'main main main main main'
       'main main main main main'
       'main main main main main'
-      '. . . . .';
+      '. botbutton botbutton botbutton .';
     height: fit-content;
   }
   .main {

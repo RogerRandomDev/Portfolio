@@ -11,16 +11,18 @@
     <meta property="og:title" content="">
     <meta property="og:description" content="">
     <title>Home Page</title>
-    <link rel="stylesheet" href="./style.css">
-    <link rel="stylesheet" href="./buttons.css">
+    <link rel="stylesheet" href = './style.css'>
+    <link rel="stylesheet" href = './buttons.css'>
 </head>
 <body>
     <div class="body">
         <div class="nav">
-            <a href="#">HOME</a>
-            <a href="./projects.html">PROJECTS</a></div>
+            <a onClick="document.location.href = '#'">HOME</a>
+            <a onclick="document.location.href = './projects.html'">PROJECTS</a></div>
         <div class="side">side</div>
-        <div class="main"><div class="pushbutton" style="width: 10%; height: 10%;"></div></div>
+        <div class="main">
+            <div class="pushbutton" style="width: 10%; height: 10%;"></div>
+        </div>
     </div>
     <div style="display: flex;" class="cardsabout">
     <div class="slideup slide1"><br>
@@ -41,8 +43,8 @@
         PROJECTS<br><br>Click Projects<br>To be taken to my projects page.<br>My favorites:<br>Spaceship Test<br>Crown Company<br><br><br><br>
     </div>
     <div class="slideup slide4"><br>
-        CONTACT INFO<br><br>I can be contacted using my: <br> Email:<br><a href="mailto:rgrang816@West-mec.org">rgrang816@<br>West-mec.org</a><br>
-        Phone Number:<br><a href="#">012-345-6789</a><br><br><br><br>
+        CONTACT INFO<br><br>I can be contacted using my: <br> Email:<br><a onClick="document.location.href = 'mailto:rgrang816@West-mec.org'">rgrang816@<br>West-mec.org</a><br>
+        Phone Number:<br><a onClick="document.location.href = '#'">012-345-6789</a><br><br><br><br>
     </div>
     </div>
 </body>

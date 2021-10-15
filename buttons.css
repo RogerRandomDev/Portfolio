@@ -13,9 +13,74 @@
   min-height: 100%;
   height: fit-content;
   background-color: red;
-  top: -50%;
+  top: -25%;
   transition-duration: 0.125s;
+}
+.pushbutton:hover:before {
+  top: -37.5%;
 }
 .pushbutton:active:before {
   top: 0%;
+}
+/****/
+.coverbutton {
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: row;
+  align-content: center;
+  justify-content: center;
+  max-height: fit-content;
+  min-width: fit-content;
+  height: 62.5%;
+  padding: 0% 0.625%;
+  margin: 0 0 0 0;
+  box-shadow: 0 0 0;
+  border: 8px double black;
+  background-color: var(--color0);
+  gap: 0% 5%;
+}
+.coverbutton::before {
+  content: '';
+  position: relative;
+  padding: 0% 25% 0% 25%;
+  left: 0%;
+  transform: scaleX(1.1) translateX(100%);
+  background-color: var(--color2);
+  box-shadow: -8px 0px 8px black;
+  z-index: 2;
+  transition-duration: 0.5s;
+}
+.coverbutton::after {
+  content: '';
+  position: relative;
+  padding: 0% 25% 0% 25%;
+  transform: scaleX(1.1) translateX(-100%);
+  background-color: var(--color2);
+  box-shadow: 8px 0px 8px black;
+  z-index: 1;
+  transition-duration: 0.5s;
+}
+.coverbutton:hover:before {
+  transform: translateX(0%);
+}
+.coverbutton:hover:after {
+  transform: translateX(0%);
+}
+.coverbutton > * {
+  justify-self: stretch;
+  align-self: stretch;
+  object-fit: scale-down;
+}
+.button {
+  align-content: center;
+  justify-content: center;
+  margin: auto auto;
+  font-size: x-large;
+  height: 95%;
+  text-align: center;
+  background-color: var(--color1);
+}
+.coverbutton > a {
+  text-decoration: none;
+  color: black;
 }
