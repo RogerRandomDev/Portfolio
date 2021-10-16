@@ -65,6 +65,25 @@ div {
   background-color: var(--color2);
   border-width: 4px;
   margin-left: 0.625%;
+  overflow: hidden;
+}
+.main::before {
+  content: ' ';
+  z-index: 1;
+  position: relative;
+  min-width: 100%;
+  min-height: 100%;
+  background-color: var(--color1);
+  animation-name: waves;
+  animation-duration: 4s;
+}
+@keyframes waves {
+  from {
+    transform: rotateZ(0deg);
+  }
+  to {
+    transform: rotateZ(360deg);
+  }
 }
 .nav {
   margin-top: 0.375%;
