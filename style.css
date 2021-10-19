@@ -206,13 +206,13 @@ div {
   .slideup {
     min-width: 20%;
     min-height: 66.66%;
-
+    transform: translateY(-17.5%);
     font-size: small;
     bottom: 0%;
     position: absolute;
   }
   .slideup:hover {
-    transform: translateY(0%);
+    transform: translateY(-100%);
   }
   .slide1 {
     left: 0%;
