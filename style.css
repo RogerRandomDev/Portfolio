@@ -16,9 +16,12 @@ body {
   margin-right: 6.25%;
   margin-top: 0px;
   margin-bottom: 0px;
+  background-image: url(./images/Background0.svg);
   background-color: var(--color1);
+  overflow: hidden;
 }
 .body {
+  overflow: hidden;
   position: relative;
   min-height: 100vh;
   margin: 0 0 0 0;
@@ -27,6 +30,7 @@ body {
   display: grid;
   align-items: center;
   justify-items: center;
+  grid-template: 100%;
   grid-template-areas:
     'nav nav nav nav nav nav'
     'main main main main main side'
@@ -51,18 +55,15 @@ div {
   box-shadow: 0px 0px 12px black;
 }
 .side {
-  display: flex;
   grid-area: side;
   background-color: var(--color2);
   border-width: 4px;
   margin-right: 3.75%;
-  flex-direction: column;
-  flex-wrap: wrap;
   gap: 1.25% 1.25%;
 }
 .main {
   grid-area: main;
-  position:relative;
+  position: relative;
   z-index: 1;
   background-color: var(--color2);
   border-width: 4px;
@@ -93,7 +94,7 @@ div {
   position: relative;
   margin-bottom: 0%;
   margin-top: 0%;
-  transform: translateY(82.5%);
+  transform: translateY(-17.5%);
   transition-duration: 0.25s;
   min-width: 20%;
   width: 20%;
@@ -106,21 +107,24 @@ div {
 }
 .slideup::before {
   content: ' ';
-  margin: 0 -50%;
+  margin: 0 0%;
   width: 100%;
   height: 100%;
   position: absolute;
   background-color: transparent;
 }
+
 .cardsabout {
+  z-index: 50;
   flex-direction: row;
   position: fixed;
   bottom: 0%;
   box-shadow: 0px 0px 0px transparent;
   width: 100%;
+  transform: translateY(100%);
 }
 .slideup:hover {
-  transform: translateY(0%);
+  transform: translateY(-100%);
 }
 .slide1 {
   left: 0%;
@@ -230,5 +234,52 @@ div {
     flex-direction: column;
     float: right;
     box-shadow: 0px 0px 0px transparent;
+  }
+}
+/**Wave animation**/
+.wave,
+.wave::before,
+.wave::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 250vw;
+  height: 250vw;
+  margin-left: -125vw;
+  transform-origin: 50% 50%;
+  background-color: transparent;
+  border-radius: 38% 42%;
+  box-shadow: inset 0 0 10vw rgba(255, 0, 255, 0.8);
+  animation: spin 16s infinite linear;
+  mix-blend-mode: multiply;
+  z-index: -1;
+}
+
+.wave::before {
+  width: 105%;
+  height: 95%;
+  margin-top: -125vw;
+  transform-origin: 49% 51%;
+  border-radius: 40% 38%;
+  box-shadow: inset 0 0 10vw rgba(255, 255, 0, 0.8);
+  animation: spin 13s infinite linear;
+  z-index: -1;
+}
+
+.wave::after {
+  width: 102%;
+  height: 98%;
+  margin-top: -125vw;
+  transform-origin: 51% 49%;
+  border-radius: 48% 42%;
+  box-shadow: inset 0 0 10vw rgba(0, 255, 255, 0.8);
+  animation: spin 10s infinite linear;
+  z-index: -1;
+}
+
+@keyframes spin {
+  100% {
+    transform: rotate(360deg);
   }
 }

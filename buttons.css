@@ -22,6 +22,12 @@
 .pushbutton:active:before {
   top: 0%;
 }
+.pushGreen {
+  background-color: rgb(205, 205, 45);
+}
+.pushGreen::before {
+  background-color: yellow;
+}
 /****/
 .coverbutton {
   display: flex;
