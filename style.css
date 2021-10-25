@@ -56,10 +56,16 @@ div {
 }
 .side {
   grid-area: side;
+  display: flex;
   background-color: var(--color2);
   border-width: 4px;
+  flex-direction: column;
   margin-right: 3.75%;
   gap: 1.25% 1.25%;
+}
+.sideButton {
+  height: 10%;
+  width: 100%;
 }
 .main {
   grid-area: main;
@@ -177,6 +183,70 @@ div {
   left: auto;
   right: auto;
 }
+
+@media screen and (max-width: 1280px) and (max-height: 720px) {
+  body {
+    width: 100%;
+    margin: 0 0;
+  }
+  .body {
+    grid-template-areas:
+      'nav nav nav nav nav nav'
+      'main main main main main side'
+      'main main main main main side'
+      'main main main main main side'
+      'main main main main main side'
+      'main main main main main side'
+      'main main main main main side'
+      'main main main main main side'
+      '. . . . . .';
+  }
+  .main {
+    margin-right: 0.625%;
+  }
+  .side {
+    margin-right: 1.75%;
+    margin-left: 1.75%;
+    flex-direction: column;
+  }
+  .sideButton {
+    height: 10%;
+    width: 100%;
+  }
+  .slideup {
+    min-width: 20%;
+    min-height: 66.66%;
+    transform: translateY(80%);
+    font-size: small;
+    bottom: 0%;
+    position: absolute;
+  }
+  .slideup:hover {
+    transform: translateY(0%);
+  }
+  .slide1 {
+    left: 0%;
+    margin-top: 0%;
+  }
+  .slide2 {
+    left: 25%;
+    margin-top: 0%;
+  }
+  .slide3 {
+    left: 55%;
+    margin-top: 0%;
+  }
+  .slide4 {
+    left: 80%;
+    margin-top: 0%;
+  }
+  .cardsabout {
+    flex-direction: column;
+    float: right;
+    box-shadow: 0px 0px 0px transparent;
+  }
+}
+
 @media screen and (max-width: 640px) {
   body {
     width: 100%;
@@ -195,6 +265,11 @@ div {
       'main main main main main main'
       '. . . . . .';
   }
+  .sideButton {
+    height: 100%;
+    width: 100%;
+    box-shadow: 0 0 0;
+  }
   .main {
     margin-right: 0.625%;
   }
@@ -202,17 +277,18 @@ div {
     margin-right: 1.75%;
     margin-left: 1.75%;
     flex-direction: row;
+    gap: 0%;
   }
   .slideup {
     min-width: 20%;
     min-height: 66.66%;
-    transform: translateY(-17.5%);
+    transform: translateY(80%);
     font-size: small;
     bottom: 0%;
     position: absolute;
   }
   .slideup:hover {
-    transform: translateY(-100%);
+    transform: translateY(0%);
   }
   .slide1 {
     left: 0%;
