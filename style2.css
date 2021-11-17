@@ -1,0 +1,112 @@
+.main_body {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  margin: 0 auto;
+}
+.slider {
+  position: relative;
+  left: 25%;
+  margin: 0 auto;
+  width: 100%;
+  height: 100%;
+}
+.slider::before {
+  position: absolute;
+  content: '';
+  background-color: black;
+  width: 50%;
+  height: 100%;
+  z-index: 1;
+  overflow: hidden;
+  transform: translateX(-50%);
+  transition-duration: 1.5s;
+  box-shadow: black 0px 0px 0px;
+}
+.slider::after {
+  position: absolute;
+  content: '';
+  background-color: black;
+  width: 50%;
+  height: 100%;
+  z-index: 1;
+  overflow: hidden;
+  transform: translateX(50%);
+  transition-duration: 1.5s;
+  box-shadow: black 0px 0px 0px;
+}
+.main_body:hover > .slider::before {
+  box-shadow: black 0px 0px 32px;
+  transform: translateX(-125%) rotateZ(60deg);
+}
+.main_body:hover > .slider::after {
+  box-shadow: black 0px 0px 32px;
+  transform: translateX(125%) rotateZ(-60deg);
+}
+.tie {
+  content: '';
+  position: absolute;
+  width: 100vw;
+  height: 12.5%;
+  transition-duration: 0.25s;
+  transition-delay: 0.125s;
+  background-color: black;
+}
+.tie::after {
+  content: '';
+  position: absolute;
+  left: 37.5%;
+  background-color: RED;
+  width: 12.5%;
+  height: 200%;
+  transform: translateY(-25%);
+  z-index: -10;
+  border-radius: 12.5%;
+  transition-duration: 0.25s;
+  transition-delay: 0.125s;
+  border-top-right-radius: 50%;
+  border-bottom-right-radius: 50%;
+}
+.tie::before {
+  content: '';
+  position: absolute;
+  left: 47.5%;
+  background-color: RED;
+  width: 12.5%;
+  height: 200%;
+  transform: translateY(-25%);
+  z-index: -10;
+  border-radius: 12.5%;
+  transition-duration: 0.25s;
+  transition-delay: 0.125s;
+  border-bottom-left-radius: 50%;
+  border-top-left-radius: 50%;
+}
+.main_body:hover > .tie {
+  transform: translateY(-127.5%);
+  transition-delay: 1.25s;
+}
+.main_body:hover > .tie::after {
+  z-index: 4;
+}
+.content {
+  position: absolute;
+  left: 15%;
+  top: 5%;
+  display: inline;
+  text-align: center;
+  font-size: x-large;
+}
+.center {
+  text-align: center;
+  position: relative;
+  font-size: xx-large;
+  width: 62.5vw;
+}
+
+@media screen and (max-width: 640px) {
+  .center {
+    width: 75vw;
+    position: absolute;
+  }
+}

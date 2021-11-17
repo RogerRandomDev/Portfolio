@@ -4,6 +4,7 @@ document.addEventListener("mousedown",enable)
 document.addEventListener("mouseup",disable)
 let active = false
 let lastosc = 0;
+var is_run = false
 function enable(){
     active = true
     startosc(lastosc)
@@ -26,6 +27,6 @@ osc.frequency.value = val;
 osc.type = "sawtooth";
 osc.connect(mainGainNode);
 lastosc = val
-if(active){osc.start(0)}
+if(active){osc.start(0);is_run = true}
 }
-function stoposc(){osc.stop(0);}
+function stoposc(){if(is_run){osc.stop(0); is_run = false}}
