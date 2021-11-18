@@ -1,9 +1,29 @@
 <link rel="stylesheet" href='./style2.css'>
+<script src="./base.js" type="text/javascript"></script>
 <div class="main_body">
+    
+    <div class="suit">
     <div class="slider"></div>
     <div class="content">
         <h1 class="center">WELCOME TO MY PORTFOLIO</h1>
-        <div>Made sure to dress it up nicely</div>
+        <p>Made sure to dress it up nicely<br>There are arrows to switch page up top and bottom</p>
     </div>
     <div class="tie"></div>
+    </div>
+
+    <div class="about">
+        <div class="content">
+            <h1 class="center">I LIKE TO MAKE GAMES</h1>
+            <p>I enjoy making games and trying out new things.</p>
+        </div>
+    </div>
+    
+    
+    
+    <div class="menubar top" onclick="next_slot(1)">
+        <div class="nextmenu"><img src="./images/arrow.png" width="64px" height="64px"><img class="moveout" src="./images/arrow.png" width="64px" height="64px"></div>
+    </div>
+    <div class="menubar bottom" onclick="next_slot(-1)">
+        <div class="nextmenu back"><img src="./images/arrow.png" width="64px" height="64px"><img class="moveout" src="./images/arrow.png" width="64px" height="64px"></div>
+    </div>
 </div>
