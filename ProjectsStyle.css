@@ -33,6 +33,7 @@
   overflow: hidden;
   gap: 2.5% 0%;
   overflow-x: scroll;
+  background-color: var(--color4);
 }
 .project {
   margin-top: 1.25%;
@@ -43,7 +44,7 @@
   max-width: 20%;
   min-height: 30%;
   max-height: 30%;
-  background-color: var(--color1);
+  background-color: var(--color3);
   border-radius: 16px;
   text-align: center;
 
@@ -76,11 +77,11 @@
 }
 .longName {
   position: relative;
-  margin-top: 0%;
-  top: 0%;
+  margin-top: 12.5%;
+  top: 12.5%;
 }
 .longName > img {
-  top: 0%;
+  top: -5%;
   height: 50%;
   margin-bottom: 5%;
 }

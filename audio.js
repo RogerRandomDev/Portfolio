@@ -22,6 +22,7 @@ mainGainNode = context.createGain();
 mainGainNode.connect(context.destination);
 mainGainNode.gain.value = 50.5;
 function startosc(val){
+    if(is_run){is_run=false;osc.stop(0)}
     osc = context.createOscillator();
 osc.frequency.value = val;
 osc.type = "sawtooth";
