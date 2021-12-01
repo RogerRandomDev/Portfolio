@@ -24,10 +24,12 @@
 }
 .pushGreen {
   background-color: rgb(25, 25, 25);
-  transform: scaleX(0.925) translateX(3.75%);
+  transform: scaleX(0.875) translateX(6.25%);
+  max-height: 12.5%;
 }
 .pushGreen::before {
   background-color: black;
+  min-height: 75%;
 }
 /****/
 .coverbutton {
@@ -94,5 +96,7 @@
 @media screen and (max-width: 600px) {
   .pushGreen {
     transform: scaleY(0.75) translateY(-12.5%);
+    min-height: 100%;
+    min-width: 12.5%;
   }
 }
