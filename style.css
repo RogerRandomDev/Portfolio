@@ -29,6 +29,7 @@ body {
   margin-top: 0px;
   margin-bottom: 0px;
   background-image: url(./images/Background0.svg);
+  background-repeat: round;
   background-color: var(--color1);
   overflow: hidden;
 }
@@ -91,7 +92,7 @@ div {
 .nav {
   margin-top: 0.375%;
   grid-area: nav;
-  background-color: var(--color2);
+  background-color: var(--color3);
   border-width: 4px;
   display: flex;
   flex-direction: row;
@@ -119,10 +120,14 @@ div {
   width: 20%;
   min-height: 33.33%;
   background-color: white;
-  box-shadow: 0px 0px 12px black;
+  box-shadow: 0px 0px 32px var(--color3);
   color: black;
   text-align: center;
   inline-size: 12.5%;
+  border-style: solid;
+  border-width: 4px;
+  border-radius: 12.5%;
+  border-color: var(--color4);
 }
 .slideup::before {
   content: ' ';

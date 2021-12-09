@@ -36,8 +36,8 @@
   height: 12.5%;
 }
 .sfp {
-  width: 25%;
-  height: 25%;
+  width: 20%;
+  height: 20%;
 }
 .sep {
   width: 25%;
@@ -255,7 +255,7 @@ img {
 }
 .shrink {
   font-size: large;
-  max-width: 25%;
+  max-width: 42.5%;
 }
 .portfolio_images {
   display: flex;
@@ -308,7 +308,7 @@ img {
   .shrink {
     font-size: 20px;
     font-kerning: none;
-    max-width: 45%;
+    max-width: 60%;
   }
   .left-side {
     top: -12.5%;
